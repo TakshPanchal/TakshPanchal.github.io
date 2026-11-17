@@ -1,6 +1,6 @@
 ---
-title: "Before Superboard: LLM pipelines at Searce and Samagra"
-description: Async LLM extraction, ML pipelines and open-source work that shaped how I build backends.
+title: "Before Superboard: LLM pipelines at Searce"
+description: Async LLM extraction and ML pipelines that shaped how I build backends.
 date: 2024-12-01
 tags: [python, llm, ml, celery]
 draft: true
@@ -14,10 +14,6 @@ draft: true
 - The fix: an async service on **Celery and Redis** that queued extractions and respected the endpoint's rate limits. Result: **3x faster** extraction.
 - Also: parallelized the ML extraction APIs (**6x faster**), and built a continuous training and deployment pipeline so clients could retrain on their own data.
 - TODO: what documents, volume per day, how retries and rate-limit backoff worked, what broke.
-
-## Samagra: training automation
-
-- TODO: which project, what the pipeline did (Django, Transformers, Celery), what you contributed, outcome.
 
 ## Open source
 
