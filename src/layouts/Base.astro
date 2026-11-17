@@ -1,0 +1,58 @@
+---
+interface Props { title?: string; description?: string }
+const { title, description = 'Taksh Panchal, founding engineer. Backend, infrastructure and AI agents.' } = Astro.props;
+const fullTitle = title ? `${title} · Taksh Panchal` : 'Taksh Panchal';
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2316a34a'/><text x='16' y='22' font-family='monospace' font-size='16' text-anchor='middle' fill='white'>$_</text></svg>" />
+</head>
+<body>
+  <main>
+    <header>
+      <a href="/" class="brand"><span class="prompt">~/</span>taksh</a>
+      <nav><a href="/#writing">writing</a><a href="/resume.pdf">resume</a><a href="https://github.com/takshpanchal">github</a></nav>
+    </header>
+    <slot />
+    <footer>
+      <span class="status"><i></i>open to senior backend / platform roles</span>
+      <span>taksh.career@gmail.com</span>
+    </footer>
+  </main>
+</body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #fafaf9; --fg: #1c1917; --muted: #78716c; --faint: #a8a29e; --line: #e7e5e4;
+    --accent: #15803d; --code-bg: #f1f0ee;
+    --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0c0c0d; --fg: #e7e5e4; --muted: #a8a29e; --faint: #6b6560; --line: #232325; --accent: #4ade80; --code-bg: #161618; }
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--bg); color: var(--fg); }
+  body { margin: 0; font: 16px/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 20px 64px; }
+  a { color: inherit; text-decoration-color: var(--faint); text-underline-offset: 3px; }
+  a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+  header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 56px; font-family: var(--mono); font-size: 14px; }
+  .brand { text-decoration: none; font-weight: 600; } .prompt { color: var(--accent); }
+  nav { display: flex; gap: 18px; } nav a { text-decoration: none; color: var(--muted); }
+  footer { margin-top: 72px; padding-top: 18px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; font: 13px var(--mono); color: var(--muted); }
+  .status i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); margin-right: 8px; vertical-align: 1px; }
+  .label { font: 12px var(--mono); color: var(--faint); text-transform: lowercase; margin: 48px 0 10px; }
+  .label::before { content: "// "; }
+  code, pre { font-family: var(--mono); font-size: 0.88em; }
+  :not(pre) > code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
+  pre { background: var(--code-bg) !important; padding: 14px 16px; border-radius: 8px; overflow-x: auto; line-height: 1.5; }
+</style>
