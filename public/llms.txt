@@ -1,0 +1,20 @@
+# Taksh Panchal
+
+> Founding engineer, 3.5+ years. Backend, infrastructure and AI agents. Built and runs Superboard.xyz end to end, serving 2.1M+ accounts. Based in Bengaluru, India.
+
+Contact: taksh.career@gmail.com
+
+## Resume
+
+- [Resume (Markdown)](https://takshpanchal.github.io/resume.md): full resume in plain text. Start here.
+- [Resume (PDF)](https://takshpanchal.github.io/resume.pdf): same content, print layout.
+
+## Writing
+
+- [Building an AI agent you can trust with real data](https://takshpanchal.github.io/posts/pawan-ai-agent/): Pawan lets our team run campaigns from Slack in plain English. The interesting part is everything that stops it from doing damage.
+- [Two cloud migrations in one year](https://takshpanchal.github.io/posts/cloud-migrations/): Moving a production backend to Fly.io and a Next.js frontend to Cloudflare Workers, and what the cost work around them taught me.
+- [Fighting a reward-farming bot army](https://takshpanchal.github.io/posts/bot-defense/): What happened when bots found our reward endpoints, why the obvious fix was wrong, and how we kept real users unblocked.
+- [/quests: 13.1s to 3.3s on slow mobile](https://takshpanchal.github.io/posts/quests-page-speed/): Why nothing on our Next.js app was server-rendered, and the wallet, image and caching changes that cut mobile load time by 75%.
+- [One build, many regions: launching Superboard in Korea](https://takshpanchal.github.io/posts/one-build-many-regions/): Serving a Korean site from the same Next.js build as the global one, without giving up static rendering.
+- [Rate-limiting a host that never tells you its limit](https://takshpanchal.github.io/posts/host-without-rate-limit/): A fix for unbounded concurrency, a convincing chart that turned out to be wrong, and the measurement lesson I keep coming back to.
+- [Pulling tables out of Hindi PDFs](https://takshpanchal.github.io/posts/hindi-pdf-tables/): How I added table detection and parsing to Samagra's PDF-to-Markdown pipeline.
